@@ -1,4 +1,6 @@
-package com.company;
+package com.company.interfaces;
+
+import com.company.Student;
 
 public interface IStudentStringConverter {
 
