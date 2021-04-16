@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.interfaces.IStudentStringConverter;
+
 public class Student {
 
     private String name;
@@ -29,4 +31,5 @@ public class Student {
     public double getSalary() {
         return salary;
     }
+
 }

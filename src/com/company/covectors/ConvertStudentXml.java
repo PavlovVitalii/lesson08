@@ -7,7 +7,7 @@ import com.company.interfaces.IStudentStringConverter;
  * @author Pavlov Vitalii
  */
 
-public class ConvertStudentXml implements IStudentStringConverter {
+public class ConvertStudentXml  {
 
     StringBuilder root = new StringBuilder("<student>\n</student>");
     StringBuilder name = new StringBuilder("\n    <name></name>");
@@ -17,7 +17,6 @@ public class ConvertStudentXml implements IStudentStringConverter {
     StringBuilder stringBuilder = new StringBuilder();
 
 
-    @Override
     public String convert(Student student) {
 
         String nameStudent = student.getName();

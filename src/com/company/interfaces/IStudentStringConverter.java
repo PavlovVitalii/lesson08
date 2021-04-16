@@ -4,5 +4,6 @@ import com.company.Student;
 
 public interface IStudentStringConverter {
 
-    String convert(Student student);
+   String convert(Student student);
+
 }

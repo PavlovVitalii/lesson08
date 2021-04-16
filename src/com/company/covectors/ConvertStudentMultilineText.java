@@ -9,7 +9,7 @@ import com.company.interfaces.IStudentStringConverter;
 
 public class ConvertStudentMultilineText implements IStudentStringConverter {
 
-    StringBuilder name = new StringBuilder("\n name=");
+    StringBuilder name = new StringBuilder(" name=");
     StringBuilder age = new StringBuilder("\n age=");
     StringBuilder id = new StringBuilder("\n id=");
     StringBuilder salary = new StringBuilder("\n salary=");
@@ -24,7 +24,7 @@ public class ConvertStudentMultilineText implements IStudentStringConverter {
         int idStudent = student.getId();
         double salaryStudent = student.getSalary();
 
-        name.insert(7, nameStudent);
+        name.insert(6, nameStudent);
         age.insert(6, ageStudent);
         id.insert(5, idStudent);
         salary.insert(9, salaryStudent);
@@ -35,8 +35,4 @@ public class ConvertStudentMultilineText implements IStudentStringConverter {
         return studentStr;
     }
 
-    public static void main(String[] args) {
-        ConvertStudentMultilineText main = new ConvertStudentMultilineText();
-        System.out.println(main.convert(new Student("Vitaliy", 25, 55, 364.25)));
-    }
 }
