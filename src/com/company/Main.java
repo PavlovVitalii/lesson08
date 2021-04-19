@@ -1,11 +1,17 @@
 package com.company;
 
-import com.company.covectors.ConvertStudentJson;
-import com.company.covectors.ConvertStudentMultilineText;
-import com.company.covectors.ConvertStudentToString;
-import com.company.covectors.ConvertStudentXml;
+import com.company.covertors.ConvertStudentJson;
+import com.company.covertors.ConvertStudentMultilineText;
+import com.company.covertors.ConvertStudentToString;
+import com.company.covertors.ConvertStudentXml;
 import com.company.interfaces.IStudentPrinter;
-import com.company.interfaces.IStudentStringConverter;
+import com.company.printters.DelegatePrint;
+import com.company.printters.Dummy;
+import com.company.printters.PrintStudentSystem;
+
+/**
+ * @author Pavlov Vitaliy
+ */
 
 public class Main {
 
@@ -33,12 +39,22 @@ public class Main {
         System.out.println(convertStudentMultilineText.convert(student));
         System.out.println();
 
-        // задание 8.4 вывод в косоль
+        // задание 8.4.1 вывод в косоль
         PrintStudentSystem printStudentSystem = new PrintStudentSystem(new ConvertStudentToString());
-        printStudentSystem.print(student);
+        Student student1 = new Student("Григорий",22,12,55.5);
+        printStudentSystem.print(student1);
         System.out.println();
 
-        //
+        // задание 8.4.2 ничего не выводит
+        Dummy dummy = new Dummy(new ConvertStudentToString());
+        dummy.print(student1);
+        System.out.println();
 
-    }
+        // задание 8.4.3 делегирование
+        Dummy dummy1 = new Dummy(new ConvertStudentToString());
+        PrintStudentSystem printStudentSystem1 = new PrintStudentSystem(new ConvertStudentToString());
+        IStudentPrinter[] iStudentPrinters = {printStudentSystem1,dummy1};
+        DelegatePrint delegatePrint = new DelegatePrint(iStudentPrinters);
+        delegatePrint.print(student1);
+   }
 }

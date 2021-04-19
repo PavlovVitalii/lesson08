@@ -2,6 +2,10 @@ package com.company;
 
 import com.company.interfaces.IStudentStringConverter;
 
+/**
+ * @author Pavlov Vitaliy
+ */
+
 public class Student {
 
     private String name;

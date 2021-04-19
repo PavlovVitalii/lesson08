@@ -1,7 +1,6 @@
-package com.company.covectors;
+package com.company.covertors;
 
 import com.company.Student;
-import com.company.interfaces.IStudentStringConverter;
 
 /**
  * @author Pavlov Vitalii
@@ -9,12 +8,12 @@ import com.company.interfaces.IStudentStringConverter;
 
 public class ConvertStudentXml  {
 
-    StringBuilder root = new StringBuilder("<student>\n</student>");
-    StringBuilder name = new StringBuilder("\n    <name></name>");
-    StringBuilder age = new StringBuilder("\n    <age></age>");
-    StringBuilder id = new StringBuilder("\n    <id></id>");
-    StringBuilder salary = new StringBuilder("\n    <salary></salary>");
-    StringBuilder stringBuilder = new StringBuilder();
+   private StringBuilder root = new StringBuilder("<student>\n</student>");
+   private StringBuilder name = new StringBuilder("\n    <name></name>");
+   private StringBuilder age = new StringBuilder("\n    <age></age>");
+   private StringBuilder id = new StringBuilder("\n    <id></id>");
+   private StringBuilder salary = new StringBuilder("\n    <salary></salary>");
+   private StringBuilder stringBuilder = new StringBuilder();
 
 
     public String convert(Student student) {

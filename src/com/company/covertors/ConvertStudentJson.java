@@ -1,4 +1,4 @@
-package com.company.covectors;
+package com.company.covertors;
 
 import com.company.Student;
 import com.company.interfaces.IStudentStringConverter;

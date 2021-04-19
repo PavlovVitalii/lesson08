@@ -1,12 +1,16 @@
-package com.company;
+package com.company.printters;
 
-import com.company.covectors.ConvertStudentToString;
+import com.company.Student;
+import com.company.covertors.ConvertStudentToString;
 import com.company.interfaces.IStudentPrinter;
-import com.company.interfaces.IStudentStringConverter;
+
+/**
+ * @author Pavlov Vitaliy
+ */
 
 public class PrintStudentSystem implements IStudentPrinter {
 
-    ConvertStudentToString studentString;
+   private ConvertStudentToString studentString;
 
     public PrintStudentSystem(ConvertStudentToString studentString) {
         this.studentString = studentString;

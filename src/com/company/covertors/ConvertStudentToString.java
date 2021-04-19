@@ -1,17 +1,21 @@
-package com.company.covectors;
+package com.company.covertors;
 
 import com.company.Student;
 import com.company.interfaces.IStudentStringConverter;
 
+/**
+ * @author Pavlov Vitaliy
+ */
+
 public class ConvertStudentToString implements IStudentStringConverter {
 
-    StringBuilder name = new StringBuilder(" Имя: ");
-    StringBuilder age = new StringBuilder("\n Возраст: ");
-    StringBuilder id = new StringBuilder("\n ID: ");
-    StringBuilder salary = new StringBuilder("\n Зарплата: ");
-    StringBuilder stringBuilder = new StringBuilder();
-    String studentInfo;
-    Student student;
+   private StringBuilder name = new StringBuilder(" Имя: ");
+   private StringBuilder age = new StringBuilder("\n Возраст: ");
+   private StringBuilder id = new StringBuilder("\n ID: ");
+   private StringBuilder salary = new StringBuilder("\n Зарплата: ");
+   private StringBuilder stringBuilder = new StringBuilder();
+   private String studentInfo;
+   private Student student;
 
 
     @Override

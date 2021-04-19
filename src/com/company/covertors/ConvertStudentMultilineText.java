@@ -1,4 +1,4 @@
-package com.company.covectors;
+package com.company.covertors;
 
 import com.company.Student;
 import com.company.interfaces.IStudentStringConverter;
@@ -9,11 +9,11 @@ import com.company.interfaces.IStudentStringConverter;
 
 public class ConvertStudentMultilineText implements IStudentStringConverter {
 
-    StringBuilder name = new StringBuilder(" name=");
-    StringBuilder age = new StringBuilder("\n age=");
-    StringBuilder id = new StringBuilder("\n id=");
-    StringBuilder salary = new StringBuilder("\n salary=");
-    StringBuilder stringBuilder = new StringBuilder();
+   private StringBuilder name = new StringBuilder(" name=");
+   private StringBuilder age = new StringBuilder("\n age=");
+   private StringBuilder id = new StringBuilder("\n id=");
+   private StringBuilder salary = new StringBuilder("\n salary=");
+   private StringBuilder stringBuilder = new StringBuilder();
 
 
     @Override
