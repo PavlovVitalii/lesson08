@@ -3,6 +3,7 @@ package com.company.printters;
 import com.company.Student;
 import com.company.covertors.ConvertStudentToString;
 import com.company.interfaces.IStudentPrinter;
+import com.company.interfaces.IStudentStringConverter;
 
 /**
  * @author Pavlov Vitaliy
@@ -10,16 +11,16 @@ import com.company.interfaces.IStudentPrinter;
 
 public class PrintStudentSystem implements IStudentPrinter {
 
-   private ConvertStudentToString studentString;
+   private IStudentStringConverter converter;
 
-    public PrintStudentSystem(ConvertStudentToString studentString) {
-        this.studentString = studentString;
+    public PrintStudentSystem(IStudentStringConverter converter) {
+        this.converter = converter;
     }
 
 
     @Override
     public void print(Student student) {
-        String studentInfo = studentString.convert(student);
+        String studentInfo = converter.convert(student);
         System.out.println(studentInfo);
     }
 

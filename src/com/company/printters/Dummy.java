@@ -3,6 +3,7 @@ package com.company.printters;
 import com.company.Student;
 import com.company.covertors.ConvertStudentToString;
 import com.company.interfaces.IStudentPrinter;
+import com.company.interfaces.IStudentStringConverter;
 
 /**
  * @author Pavlov Vitaliy
@@ -10,10 +11,10 @@ import com.company.interfaces.IStudentPrinter;
 
 public class Dummy implements IStudentPrinter {
 
-   private ConvertStudentToString studentString;
+    private IStudentStringConverter converter;
 
-    public Dummy(ConvertStudentToString studentString) {
-        this.studentString = studentString;
+    public Dummy(IStudentStringConverter converter) {
+        this.converter = converter;
     }
 
     @Override

@@ -9,30 +9,19 @@ import com.company.interfaces.IStudentStringConverter;
 
 public class ConvertStudentToString implements IStudentStringConverter {
 
-   private StringBuilder name = new StringBuilder(" Имя: ");
-   private StringBuilder age = new StringBuilder("\n Возраст: ");
-   private StringBuilder id = new StringBuilder("\n ID: ");
-   private StringBuilder salary = new StringBuilder("\n Зарплата: ");
-   private StringBuilder stringBuilder = new StringBuilder();
-   private String studentInfo;
-   private Student student;
-
-
     @Override
     public String convert(Student student) {
 
-        String nameStudent = student.getName();
-        int ageStudent = student.getAge();
-        int idStudent = student.getId();
-        double salaryStudent = student.getSalary();
-
-        name.insert(6, nameStudent);
-        age.insert(11, ageStudent);
-        id.insert(6, idStudent);
-        salary.insert(12, salaryStudent);
-
-        stringBuilder.append(name).append(age).append(id).append(salary);
-        studentInfo = stringBuilder.toString();
+        String studentInfo = new StringBuilder()
+                .append(" Имя: ")
+                .append(student.getName())
+                .append("\n Возраст: ")
+                .append(student.getAge())
+                .append("\n ID: ")
+                .append(student.getId())
+                .append("\n Зарплата: ")
+                .append(student.getSalary())
+                .toString();
 
         return studentInfo;
     }
