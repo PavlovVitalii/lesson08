@@ -8,6 +8,7 @@ import com.company.interfaces.IStudentPrinter;
 import com.company.printters.DelegatePrint;
 import com.company.printters.Dummy;
 import com.company.printters.PrintStudentSystem;
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
 /**
  * @author Pavlov Vitaliy
@@ -17,7 +18,7 @@ public class Main {
 
     public static void main(String[] args) {
         Student student = new Student("Роман", 20, 56, 543.59);
-
+        
         // конвертор JSON
         ConvertStudentJson convertStudentJson = new ConvertStudentJson();
         System.out.println("JSON format");
@@ -57,4 +58,5 @@ public class Main {
         DelegatePrint delegatePrint = new DelegatePrint(iStudentPrinters);
         delegatePrint.print(student1);
    }
+
 }
