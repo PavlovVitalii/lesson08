@@ -18,7 +18,7 @@ public class Main {
 
     public static void main(String[] args) {
         Student student = new Student("Роман", 20, 56, 543.59);
-        
+
         // конвертор JSON
         ConvertStudentJson convertStudentJson = new ConvertStudentJson();
         System.out.println("JSON format");
@@ -57,6 +57,10 @@ public class Main {
         IStudentPrinter[] iStudentPrinters = {printStudentSystem1,dummy1};
         DelegatePrint delegatePrint = new DelegatePrint(iStudentPrinters);
         delegatePrint.print(student1);
+//
+//        System.out.println(Student.runCompareToByName().compare(student,
+//                new Student("Григорий",22,12,55.5)));
+
    }
 
 }
