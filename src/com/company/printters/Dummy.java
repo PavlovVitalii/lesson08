@@ -1,7 +1,6 @@
 package com.company.printters;
 
 import com.company.Student;
-import com.company.covertors.ConvertStudentToString;
 import com.company.interfaces.IStudentPrinter;
 import com.company.interfaces.IStudentStringConverter;
 

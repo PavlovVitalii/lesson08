@@ -1,7 +1,6 @@
 package com.company.printters;
 
 import com.company.Student;
-import com.company.covertors.ConvertStudentToString;
 import com.company.interfaces.IStudentPrinter;
 import com.company.interfaces.IStudentStringConverter;
 
@@ -23,6 +22,7 @@ public class PrintStudentSystem implements IStudentPrinter {
         String studentInfo = converter.convert(student);
         System.out.println(studentInfo);
     }
+
 
 
 }
